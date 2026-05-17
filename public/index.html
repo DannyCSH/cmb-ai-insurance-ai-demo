@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI保障管家 Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="phone" aria-label="招商银行App AI保障管家产品Demo">
+        <div class="status-bar">
+          <span>05:14</span>
+          <div class="status-spacer"></div>
+          <span>5G ▰▰</span>
+        </div>
+
+        <div class="screen" id="screen">
+          <section class="app-view active" id="cmbHome" aria-label="招商银行App首页">
+            <header class="cmb-hero">
+              <div class="top-tools">
+                <button class="icon-btn" aria-label="扫一扫">⌗</button>
+                <div class="search-pill">指数拼图</div>
+                <button class="icon-btn" aria-label="小招">☻</button>
+                <button class="icon-btn badge" aria-label="消息">▢</button>
+              </div>
+              <div class="hero-actions">
+                <div class="hero-action">
+                  <div class="hero-icon">☀</div>
+                  <strong>朝朝宝</strong>
+                </div>
+                <div class="hero-action">
+                  <div class="hero-icon">¥</div>
+                  <strong>借钱</strong>
+                </div>
+                <div class="hero-action">
+                  <div class="hero-icon">↔</div>
+                  <strong>转账</strong>
+                </div>
+                <div class="hero-action">
+                  <div class="hero-icon">○</div>
+                  <strong>账户总览</strong>
+                </div>
+              </div>
+            </header>
+
+            <section class="service-panel">
+              <div class="service-grid">
+                <button class="service-item">
+                  <span class="line-icon">▭</span>
+                  <strong>申请信用卡</strong>
+                </button>
+                <button class="service-item">
+                  <span class="line-icon">▤</span>
+                  <strong>收支明细</strong>
+                </button>
+                <button class="service-item">
+                  <span class="line-icon">▱</span>
+                  <strong>申请储蓄卡</strong>
+                </button>
+                <button class="service-item">
+                  <span class="line-icon">∿</span>
+                  <strong>话费流量</strong>
+                </button>
+                <button class="service-item">
+                  <span class="line-icon">♨</span>
+                  <strong>热门活动</strong>
+                </button>
+                <button class="service-item">
+                  <span class="line-icon">♡</span>
+                  <strong>养老金融</strong>
+                </button>
+                <button class="service-item featured" data-route="guardianHome">
+                  <span class="line-icon">✦</span>
+                  <strong>AI保障管家</strong>
+                </button>
+                <button class="service-item">
+                  <span class="line-icon">▯</span>
+                  <strong>他行卡转入</strong>
+                </button>
+                <button class="service-item">
+                  <span class="line-icon">⋯</span>
+                  <strong>全部</strong>
+                </button>
+              </div>
+            </section>
+
+            <section class="xiao-card">
+              <div class="xiao-title"><span>✉ 小招</span>Hi，我是你的智能财富助理</div>
+              <div class="promo-card">
+                <small>优享基金</small>
+                <strong>稳中求进有“优”解</strong>
+                <span>严选固收+ 求稳又求盈</span>
+                <button>点击查看</button>
+              </div>
+            </section>
+
+            <section class="wealth-list">
+              <div class="section-head">
+                <h2>财富精选</h2>
+                <span>更多</span>
+              </div>
+              <article class="wealth-card">
+                <div>
+                  <strong>活钱理财｜历史天天正收益</strong>
+                  <p><b>2.80%</b> 7日年化</p>
+                </div>
+                <button>去看看</button>
+              </article>
+              <div class="mini-wealth">
+                <div><strong>T+1到账</strong><b>1.05%</b></div>
+                <div><strong>100%纯债</strong><b>3.69%</b></div>
+                <div><strong>保险 R1低风险</strong><b>3.30%</b></div>
+              </div>
+            </section>
+          </section>
+
+          <section class="app-view" id="guardianHome" aria-label="AI保障管家首页">
+            <header class="sub-header red">
+              <button class="back-btn" data-route="cmbHome">‹</button>
+              <div>
+                <strong>AI保障管家</strong>
+                <span>3分钟看懂家庭保障</span>
+              </div>
+              <button class="header-text" data-route="advisorDesk">经理端</button>
+            </header>
+
+            <section class="voice-card">
+              <div class="voice-orbit">
+                <button class="mic-button" data-route="voiceConsult" aria-label="开始语音问诊">🎙</button>
+              </div>
+              <h1>说说你的家庭和保障情况</h1>
+              <p>不用填长问卷，直接发一段语音，AI会拆解成要点让你确认。</p>
+              <button class="primary full" data-route="voiceConsult">开始语音问诊</button>
+            </section>
+
+            <section class="quick-grid">
+              <button data-route="policyManager"><span>▤</span><strong>整理已有保单</strong><small>OCR识别与缺口汇总</small></button>
+              <button data-route="reportView"><span>◎</span><strong>查看保障报告</strong><small>寿险/重疾/医疗画像</small></button>
+              <button data-route="recommendView"><span>⇄</span><strong>智能推荐</strong><small>自助或转经理</small></button>
+              <button data-route="advisorDesk"><span>▣</span><strong>经理协同</strong><small>复杂产品复核</small></button>
+            </section>
+
+            <section class="info-card compact">
+              <div class="card-title">
+                <strong>本次Demo主线</strong>
+                <span>AI保险需求挖掘与分层推荐</span>
+              </div>
+              <div class="flow-mini">
+                <span>语音/保单</span>
+                <i></i>
+                <span>AI确认</span>
+                <i></i>
+                <span>保障档案</span>
+                <i></i>
+                <span>推荐分流</span>
+              </div>
+            </section>
+          </section>
+
+          <section class="app-view" id="voiceConsult" aria-label="语音问诊">
+            <header class="sub-header">
+              <button class="back-btn" data-route="guardianHome">‹</button>
+              <div>
+                <strong>语音问诊</strong>
+                <span>AI拆解后由你确认</span>
+              </div>
+              <button class="header-text" id="resetDemo">重置</button>
+            </header>
+
+            <section class="chat-panel">
+              <div class="chat-list" id="chatList"></div>
+              <div class="analysis-card" id="analysisCard">
+                <div class="card-title">
+                  <strong>AI理解到以下信息</strong>
+                  <span>请确认是否准确</span>
+                </div>
+                <ol>
+                  <li>35岁，已婚，三口之家，孩子5岁。</li>
+                  <li>房贷剩余约180万，本人为主要收入来源。</li>
+                  <li>已有五险一金，买过医疗险但保障范围不清。</li>
+                  <li>每月新增保费预算约1000-1500元。</li>
+                  <li>主要担心家庭支柱风险和生病拖累家庭。</li>
+                </ol>
+                <div class="confirm-actions">
+                  <button class="primary" data-confirm="true">全部正确</button>
+                  <button class="secondary" data-edit="2">修改第2点</button>
+                  <button class="secondary" data-route="policyManager">补充保单</button>
+                </div>
+              </div>
+            </section>
+
+            <div class="record-panel">
+              <div class="wave"><span></span><span></span><span></span><span></span><span></span></div>
+              <button class="record-btn" id="recordBtn">按住说话</button>
+            </div>
+          </section>
+
+          <section class="app-view" id="policyManager" aria-label="保单管家">
+            <header class="sub-header">
+              <button class="back-btn" data-route="guardianHome">‹</button>
+              <div>
+                <strong>保单管家</strong>
+                <span>把零散保单变成保障档案</span>
+              </div>
+              <button class="header-text">+ 添加</button>
+            </header>
+
+            <section class="upload-card">
+              <div class="upload-icon">▤</div>
+              <div>
+                <strong>上传保单照片或PDF</strong>
+                <p>AI自动识别险种、保额、保障期、免责责任与续保条件。</p>
+              </div>
+              <button class="primary small" id="scanPolicy">模拟识别</button>
+            </section>
+
+            <section class="policy-list" id="policyList">
+              <article class="policy-card pending">
+                <div class="policy-icon">医</div>
+                <div>
+                  <strong>招商信诺个人医疗险</strong>
+                  <p>被保人：本人｜保额300万｜保障中</p>
+                  <span>AI提示：需复核续保条件与院外药责任</span>
+                </div>
+              </article>
+              <article class="policy-card">
+                <div class="policy-icon">儿</div>
+                <div>
+                  <strong>少儿重疾保障</strong>
+                  <p>被保人：子女｜保额50万｜保障中</p>
+                  <span>AI提示：已覆盖少儿基础重疾</span>
+                </div>
+              </article>
+            </section>
+
+            <section class="summary-card">
+              <strong>AI保障总结</strong>
+              <p>已有医疗和少儿保障，家庭支柱寿险缺失；重疾保障不足以覆盖3年收入中断风险。</p>
+              <button class="primary full" data-route="reportView">生成保障报告</button>
+            </section>
+          </section>
+
+          <section class="app-view" id="reportView" aria-label="保障报告">
+            <header class="sub-header">
+              <button class="back-btn" data-route="guardianHome">‹</button>
+              <div>
+                <strong>保障报告</strong>
+                <span>需求-风险-产品三层推理</span>
+              </div>
+              <button class="header-text">PDF</button>
+            </header>
+
+            <section class="score-card">
+              <div class="score-ring">
+                <span>62</span>
+                <small>保障分</small>
+              </div>
+              <div>
+                <strong>当前风险：中等偏高</strong>
+                <p>主要短板不是医疗报销，而是家庭支柱收入中断后的房贷和子女教育责任。</p>
+              </div>
+            </section>
+
+            <section class="radar-card">
+              <div class="radar">
+                <div class="axis a1"></div>
+                <div class="axis a2"></div>
+                <div class="axis a3"></div>
+                <div class="axis a4"></div>
+                <div class="axis a5"></div>
+                <div class="radar-fill"></div>
+              </div>
+              <div class="legend-grid">
+                <span><i class="bad"></i>寿险 25</span>
+                <span><i class="warn"></i>重疾 45</span>
+                <span><i class="ok"></i>医疗 80</span>
+                <span><i class="bad"></i>意外 35</span>
+                <span><i class="warn"></i>养老 50</span>
+              </div>
+            </section>
+
+            <section class="gap-list">
+              <article>
+                <strong>寿险缺口</strong>
+                <p>房贷180万 + 家庭支出5年 + 子女教育金，建议优先复核寿险方案。</p>
+                <b>高优先级</b>
+              </article>
+              <article>
+                <strong>重疾缺口</strong>
+                <p>现有重疾保障不足以覆盖康复期收入损失，建议由经理测算保额。</p>
+                <b>中优先级</b>
+              </article>
+              <article>
+                <strong>意外保障</strong>
+                <p>当前意外保障为空，属于标准化产品，可App自助补齐。</p>
+                <b>可自助</b>
+              </article>
+            </section>
+            <button class="primary sticky-cta" data-route="recommendView">生成推荐路径</button>
+          </section>
+
+          <section class="app-view" id="recommendView" aria-label="推荐分流">
+            <header class="sub-header">
+              <button class="back-btn" data-route="reportView">‹</button>
+              <div>
+                <strong>推荐分流</strong>
+                <span>标准品自助，复杂品转经理</span>
+              </div>
+              <button class="header-text">说明</button>
+            </header>
+
+            <section class="decision-card">
+              <div class="decision-node">AI判断下一步服务路径</div>
+              <div class="decision-branches">
+                <article>
+                  <strong>标准品自助</strong>
+                  <p>意外险、短期医疗险、旅行险等责任简单产品。</p>
+                </article>
+                <article>
+                  <strong>复杂品转经理</strong>
+                  <p>寿险、重疾、年金、增额终身寿等长期规划产品。</p>
+                </article>
+                <article>
+                  <strong>暂不推荐</strong>
+                  <p>保障重复、预算不足、健康告知不明确时先优化。</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="product-card self">
+              <span class="path-badge">App自助</span>
+              <strong>一年期综合意外保障</strong>
+              <p>推荐原因：当前意外保障为空，产品责任清晰、保费低，可先补齐基础风险。</p>
+              <div class="product-meta"><span>约18元/月</span><span>低复杂度</span><span>可自助</span></div>
+              <button class="primary full">查看并自助投保</button>
+            </section>
+
+            <section class="product-card advisor">
+              <span class="path-badge">经理复核</span>
+              <strong>家庭支柱寿险/重疾方案</strong>
+              <p>涉及长期缴费、健康告知和家庭现金流安排，AI已生成规划摘要并建议转客户经理。</p>
+              <div class="product-meta"><span>寿险缺口高</span><span>需复核</span><span>不直接成交</span></div>
+              <button class="secondary full" data-route="advisorDesk">查看经理工作台</button>
+            </section>
+          </section>
+
+          <section class="app-view" id="advisorDesk" aria-label="经理工作台">
+            <header class="desk-header">
+              <button class="back-btn" data-route="guardianHome">‹</button>
+              <div>
+                <strong>保障推荐小助</strong>
+                <span>客户经理工作台</span>
+              </div>
+              <button class="header-text">推送</button>
+            </header>
+
+            <section class="desk-tabs">
+              <button class="active">待复核</button>
+              <button>已沟通</button>
+              <button>待跟进</button>
+            </section>
+
+            <section class="client-ticket">
+              <div class="client-top">
+                <div>
+                  <strong>陈女士｜金葵花客户</strong>
+                  <p>三口之家｜房贷180万｜预算1000-1500元/月</p>
+                </div>
+                <span>高优先级</span>
+              </div>
+              <div class="ticket-grid">
+                <div><small>核心缺口</small><b>寿险/重疾</b></div>
+                <div><small>已有保障</small><b>医疗+少儿</b></div>
+                <div><small>AI路径</small><b>转经理</b></div>
+                <div><small>用户顾虑</small><b>预算压力</b></div>
+              </div>
+            </section>
+
+            <section class="advisor-panel">
+              <div class="panel-block">
+                <strong>AI推荐依据</strong>
+                <p>客户为家庭主要收入来源，房贷和子女教育责任较高；已有医疗险，但缺少覆盖收入中断和身故责任的长期方案。</p>
+              </div>
+              <div class="panel-block">
+                <strong>沟通话术</strong>
+                <p>您现在不是缺某一款保险，而是家庭责任还没有完整覆盖。我们先看房贷、孩子教育和收入中断风险，再决定是否配置。</p>
+              </div>
+              <div class="panel-actions">
+                <button class="secondary">调优方案</button>
+                <button class="secondary">生成PDF</button>
+                <button class="primary">预约沟通</button>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <nav class="bottom-tab">
+          <button class="active" data-route="cmbHome"><span>⌂</span>首页</button>
+          <button><span>◎</span>社区</button>
+          <button data-route="guardianHome"><span>↗</span>财富</button>
+          <button><span>▣</span>生活</button>
+          <button><span>♙</span>我的</button>
+        </nav>
+      </section>
+
+      <aside class="demo-notes">
+        <div class="note-kicker">招商银行App内嵌式产品Demo</div>
+        <h2>AI保障管家</h2>
+        <p class="note-lead">用AI把“我该买什么保险”拆成可确认的保障档案、可解释的风险缺口和可落地的分层推荐路径。</p>
+
+        <div class="note-grid">
+          <div class="note-card">
+            <strong>产品定位</strong>
+            <span>不是独立保险App，而是嵌入招行首页宫格、小招卡片和财富/保险频道的轻量保障规划入口。</span>
+          </div>
+          <div class="note-card">
+            <strong>核心分流</strong>
+            <span>意外险、短期医疗险等标准品由AI解释后自助购买；寿险、重疾、年金等复杂品转客户经理复核。</span>
+          </div>
+        </div>
+
+        <section class="note-section">
+          <h3>Demo讲解顺序</h3>
+          <ol class="demo-steps">
+            <li><b>首页入口：</b>在招行App高频宫格中点击“AI保障管家”，降低冷启动和跳转成本。</li>
+            <li><b>语音问诊：</b>用户直接说家庭、房贷、保单、预算，AI拆解成编号摘要并要求确认。</li>
+            <li><b>保障档案：</b>保单管家用OCR和条款RAG整理已有保单，形成可计算的保障底账。</li>
+            <li><b>缺口报告：</b>AI从家庭责任、健康风险、预算偏好推理寿险、重疾、医疗等短板。</li>
+            <li><b>推荐分流：</b>标准品自助、复杂品转经理、暂不推荐三条路径避免AI越过合规边界。</li>
+            <li><b>经理工作台：</b>AI生成客户画像、候选方案、推荐依据、异议话术和合规提示。</li>
+          </ol>
+        </section>
+
+        <section class="note-section">
+          <h3>AI能力链路</h3>
+          <div class="capability-list">
+            <div><b>ASR + NLU</b><span>理解语音中的家庭结构、房贷、预算、已有保障和真实顾虑。</span></div>
+            <div><b>文档理解</b><span>从保单图片/PDF中抽取险种、保额、期限、免责、续保等字段。</span></div>
+            <div><b>向量库 + 图谱</b><span>把用户需求语义与产品责任标签匹配，减少只按关键词推荐。</span></div>
+            <div><b>RAG + 规则引擎</b><span>条款解释基于真实条款检索，年龄、职业、健康告知等由规则硬校验。</span></div>
+          </div>
+        </section>
+
+        <section class="note-section">
+          <h3>交互亮点</h3>
+          <div class="highlight-box">
+            <strong>用户不用填长问卷，只要发一段语音。</strong>
+            <p>AI先把信息拆成1/2/3/4点，用户确认后再进入推荐，既提升体验，也降低AI误判带来的保险推荐风险。</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

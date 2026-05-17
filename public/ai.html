@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI保障管家 - 真实AI体验</title>
+    <link rel="stylesheet" href="./ai.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">招商银行App AI保障管家</p>
+          <h1>真实AI保险需求挖掘体验</h1>
+          <p class="lead">
+            输入一段客户原话，后端会调用真实AI，把自然语言拆解成保障档案、AI标签、保险需求和推荐分流结果。
+          </p>
+        </div>
+        <a class="ghost-link" href="/">返回静态Demo</a>
+      </section>
+
+      <section class="workspace">
+        <form class="input-card" id="analysisForm">
+          <div class="card-head">
+            <div>
+              <h2>客户原话</h2>
+              <p>可直接粘贴你视频里要演示的客户语音转写内容。</p>
+            </div>
+            <button class="text-btn" type="button" id="sampleBtn">填入样例</button>
+          </div>
+          <textarea id="customerInput" maxlength="1800" required></textarea>
+          <label class="correction">
+            <span>可选：用户修正信息</span>
+            <input id="correctionInput" placeholder="例如：预算不是3000，是6000；房贷还剩120万" />
+          </label>
+          <div class="actions">
+            <button class="primary" id="analyzeBtn" type="submit">调用真实AI分析</button>
+            <button class="secondary" id="managerBtn" type="button" disabled>生成经理报告</button>
+          </div>
+          <p class="hint">演示建议：先生成一次，再填入修正信息重新分析，体现多轮纠偏。</p>
+        </form>
+
+        <section class="result-card">
+          <div class="card-head">
+            <div>
+              <h2>AI输出结果</h2>
+              <p id="statusText">等待输入客户原话。</p>
+            </div>
+            <span class="status-dot" id="statusDot"></span>
+          </div>
+
+          <div class="empty-state" id="emptyState">
+            <strong>还没有分析结果</strong>
+            <span>点击“调用真实AI分析”后，这里会展示结构化保障档案和推荐分流。</span>
+          </div>
+
+          <div class="result-grid hidden" id="resultGrid">
+            <article>
+              <h3>确认摘要</h3>
+              <ol id="summaryList"></ol>
+            </article>
+            <article>
+              <h3>AI标签</h3>
+              <div class="tag-list" id="tagList"></div>
+            </article>
+            <article>
+              <h3>保障需求</h3>
+              <div id="needsList"></div>
+            </article>
+            <article>
+              <h3>推荐分流</h3>
+              <div class="route-card" id="routeCard"></div>
+            </article>
+            <article class="wide">
+              <h3>给客户看的解释</h3>
+              <p id="userExplanation"></p>
+            </article>
+            <article class="wide">
+              <h3>合规提示</h3>
+              <ul id="complianceList"></ul>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="manager-card hidden" id="managerCard">
+        <div class="card-head">
+          <div>
+            <h2>经理版保障报告</h2>
+            <p>复杂产品转经理复核时，AI生成可复核、可沟通、可留痕的半成品报告。</p>
+          </div>
+        </div>
+        <div class="manager-grid">
+          <article>
+            <h3>经理摘要</h3>
+            <p id="managerBrief"></p>
+          </article>
+          <article>
+            <h3>高优先级信号</h3>
+            <ul id="managerSignals"></ul>
+          </article>
+          <article>
+            <h3>推荐依据</h3>
+            <ul id="managerBasis"></ul>
+          </article>
+          <article>
+            <h3>沟通话术</h3>
+            <p id="managerTalk"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./ai.js"></script>
+  </body>
+</html>

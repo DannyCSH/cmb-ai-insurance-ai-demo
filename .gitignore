@@ -3,6 +3,8 @@ node_modules/
 .env.*
 !.env.example
 npm-debug.log*
+*.log
+*.pid
 .DS_Store
 dist/
 coverage/
